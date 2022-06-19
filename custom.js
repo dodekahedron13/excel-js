@@ -1,9 +1,9 @@
 $(function ($) {   
 
     const matrisC = () => {
-        for (let i = 1; i <= parseInt(window.x); i++) {
+        for (let i = 1; i <= window.x; i++) {
             $('#multiArr').append(`<div class="d-flex" id=sa${i}></div>`);
-            for (let j = 1; j <= parseInt(window.y); j++) {
+            for (let j = 1; j <= window.y; j++) {
                 $(`#sa${i}`).append(`
                 <input type="text"
                        id="matris_${i}x${j}"
@@ -26,10 +26,10 @@ $(function ($) {
             //console.log(typeof window.x);
             if ( window.x==null ||
                  window.y==null || 
-                 window.x==0 || 
-                 window.y==0 ) {
-                window.x == null;
-                window.y == null;
+                 window.x<=0 || 
+                 window.y<=0 ) {
+                window.x = null;
+                window.y = null;
                 return matrisQ();
             } else {
                 matrisC();
