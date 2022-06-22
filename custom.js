@@ -32,8 +32,7 @@ $(function ($) {
                 window.y = null;
                 return matrisQ();
             } else {
-                matrisC();
-                return $('#matris_1x1').focus();
+                return matrisC() || $('#matris_1x1').focus();                 
             }
         }
     }
