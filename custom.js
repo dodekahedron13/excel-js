@@ -27,9 +27,7 @@ $(function ($) {
             if ( window.x==null ||
                  window.y==null || 
                  window.x<=0 || 
-                 window.y<=0 ) {
-                window.x = null;
-                window.y = null;
+                 window.y<=0 ) {                
                 return matrisQ();
             } else {
                 return matrisC() || $('#matris_1x1').focus();                 
