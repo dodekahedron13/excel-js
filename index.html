@@ -15,9 +15,20 @@
 <body>
     <div class="mt-4"></div>    
     <div class="container-fluid">
-        <input type="text" class="form-control mb-2" id="text" readonly />
+
+        <div class="input-group">            
+            <input type="text" class="form-control mb-2" id="calc" /> <!-- readonly -->
+            <div class="input-group-append">
+                <button class="input-group-text font-weight-bold text-light bg-danger btn" 
+                        id="clear"
+                        style="cursor: pointer; outline: none; height: 39px;"
+                        title="Formül Çubuğu">Temizle
+                </button>
+            </div>
+        </div>
+
         <div class="col-sm-12 col-md-12 pl-0" id="multiArr"></div>
     </div>
-<script src="custom.js"></script>    
+<script src="main.js"></script>    
 </body>
 </html>
