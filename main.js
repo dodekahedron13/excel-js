@@ -204,8 +204,7 @@ $(function ($) {
             return 0;
         }
         if( !this.value ) {
-        	this.focus();
-            return 0;
+        	return this.focus();            
         }
     });
 
