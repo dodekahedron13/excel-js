@@ -228,7 +228,9 @@ $(function ($) {
     window.sayac = 1;
     $('#calc').on('keyup', function(event) {
         if ( event.which == 13 && $(this).val().indexOf('x') != -1 ) {
-            var fk = $(this).val() ? $(this).val().split('(')[0].split('=')[1] : null;
+            var fk = $(this).val() 
+            ? $(this).val().split('(')[0].split('=')[1] 
+            : null;
             if ( !fk ) {
                 return alert('Parametre Kullanımı Hatalı!..');
             }
@@ -240,7 +242,9 @@ $(function ($) {
                     }
                 });
             }
-            var matrisVal = $(this).val() ? $(this).val().split('(')[1].split(')')[0] : null;
+            var matrisVal = $(this).val() 
+            ? $(this).val().split('(')[1].split(')')[0] 
+            : null;
             if ( !matrisVal ) {
                 return alert('Fonksiyon Parametreleri veya Fonksiyon Kullanımı Hatalı!');
             }
