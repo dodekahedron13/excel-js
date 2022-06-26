@@ -23,7 +23,7 @@ $(function ($) {
         ? window.y 
         : null;
 
-        while(true) {            
+        while( true ) {            
             if ( window.x==null ||
                  window.y==null || 
                  window.x <= 0  || 
@@ -37,7 +37,7 @@ $(function ($) {
 
     matrisQ();
     
-    function TOPLA(...arr){
+    function TOPLA(...arr) {
         var t = 0;        
         arr = JSON.parse(`[${arr}]`);
 
@@ -57,7 +57,7 @@ $(function ($) {
         }
         return arr.split(',').map(x => parseFloat(x)).reduce((x, y) => x + y, 0);*/
     }
-    function CIKAR(...arr){
+    function CIKAR(...arr) {
         arr = JSON.parse(`[${arr}]`);
         var c = arr[0];        
         if (Array.isArray(arr)){
@@ -70,7 +70,7 @@ $(function ($) {
         }
         return c;
     }    
-    function CARP(...arr){ 
+    function CARP(...arr) { 
         arr = JSON.parse(`[${arr}]`);
         var r = 1;
         arr.forEach(element => {
@@ -78,7 +78,7 @@ $(function ($) {
         });
         return r; 
     }
-    function BOL(...arr){ 
+    function BOL(...arr) { 
         arr = JSON.parse(`[${arr}]`);
         var b = arr[0];
         for(let i=1; i<=arr.length-1; i++) {
@@ -149,7 +149,7 @@ $(function ($) {
         ];
     }
 
-    $('[id*=matris_]').on('click', function(){
+    $('[id*=matris_]').on('click', function() {
         if ( this.value && this.dataset.ress && this.dataset.deff ) {
             $(this).val( this.dataset.ress );
             $('#calc').val( this.dataset.deff );
@@ -158,14 +158,14 @@ $(function ($) {
         //return $('#calc').val('');
     });
 
-    $('[id*=matris_]').on('input', function(){
+    $('[id*=matris_]').on('input', function() {
         //$('#calc').val( $(this).val() );
         if ( this.value.length == 1 && this.value == "=" ) {
             return functionListCall();
         }
     });
 
-    $('[id*=matris_]').on('keyup', function(event){
+    $('[id*=matris_]').on('keyup', function(event) {
         if ( event.which == 13) {
             if ( this.value.length == 0 ) {
                 $(this).removeAttr('data-deff');
