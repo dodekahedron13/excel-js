@@ -30,7 +30,7 @@ $(function ($) {
                  window.y <= 0 ) {
                 return matrisQ();
             } else {
-                return matrisC(), $('#matris_1x1').focus();
+                return matrisC() || $('#matris_1x1').focus();
             }
         }
     }
