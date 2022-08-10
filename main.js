@@ -24,8 +24,8 @@ $(function ($) {
         : null;
 
         while( true ) {            
-            if ( window.x==null ||
-                 window.y==null || 
+            if ( !window.x ||
+                 !window.y || 
                  window.x <= 0  || 
                  window.y <= 0 ) {
                 return matrisQ();
