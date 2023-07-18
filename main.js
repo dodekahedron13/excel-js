@@ -1,9 +1,9 @@
 $(function ($) {
 
-    const matrisC = () => {
-        for (let i = 1; i <= window.x; i++) {
+    const matrisC = (x,y) => {
+        for (let i = 1; i <= x; i++) {
             $('#multiArr').append(`<div class="d-flex" id=sa${i}></div>`);
-            for (let j = 1; j <= window.y; j++) {
+            for (let j = 1; j <= y; j++) {
                 $(`#sa${i}`).append(`
                 <input type="text"
                        id="matris_${i}x${j}"
@@ -14,23 +14,20 @@ $(function ($) {
     }    
 
     function matrisQ() {
-        window.x = Number(prompt("Satır: "));
-        window.x = window.x 
-        ? window.x 
-        : null;
-        window.y = Number(prompt("Sütun: "));
-        window.y = window.y 
-        ? window.y 
-        : null;
-
+        let x = Number(prompt("Satır: ")) ?? null;
+        x = x ? x : null;
+        
+        let y = Number(prompt("Sütun: ")) ?? null;
+        y = y ? y : null;
+        
         while( true ) {            
-            if ( !window.x ||
-                 !window.y || 
-                 window.x <= 0  || 
-                 window.y <= 0 ) {
+            if ( !x ||
+                 !y || 
+                 x <= 0  || 
+                 y <= 0 ) {
                 return matrisQ();
             } else {
-                return matrisC() || $('#matris_1x1').focus();
+                return matrisC(x,y) || $('#matris_1x1').focus();
             }
         }
     }
