@@ -86,10 +86,10 @@ $(function ($) {
 
     const functionList = () => {
         window.functionLists = [
-            'TOPLA(n,n+1,...) - TOPLA(1,2,3,4,...,10) gibi', 
-            'CIKAR(n,n+1,...) - CIKAR(10,9,8,...,1) gibi', 
-            'CARP(n,n+1,...) - CARP(1,2,3,...,10) gibi', 
-            'BOL(n,n+1,...) - BOL(10,1,2)'
+            '=TOPLA(n,n+1,...) - =TOPLA(1,2,3,4,...,10) gibi', 
+            '=CIKAR(n,n+1,...) - =CIKAR(10,9,8,...,1) gibi', 
+            '=CARP(n,n+1,...) - =CARP(1,2,3,...,10) gibi', 
+            '=BOL(n,n+1,...) - =BOL(10,1,2)'
         ];
     }
 
@@ -181,7 +181,7 @@ $(function ($) {
             if ( kontrol ) {
                 alert(`Fonksiyon Parametrelerinden bazıları Hatalı Olabilir!.. 
                 veya Tanımsız bir Fonksiyon Çağırmış olabilirsiniz.`);
-                return 0;
+                return console.log(functionList());
             }
             $(this).attr('data-deff', this.value);
             $(this).attr('title', ''+$(this).attr('title')+' dbclick formülü verir.');
