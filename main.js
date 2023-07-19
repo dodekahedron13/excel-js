@@ -27,7 +27,7 @@ $(function ($) {
                  y < 1 ) {
                 return matrisQ();
             } else {
-                return matrisC(x,y) || $('#matris_1x1').focus();
+                return matrisC(x,y) || $('#matris_0x0').focus();
             }
         }
     }
